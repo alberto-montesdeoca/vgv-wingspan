@@ -210,6 +210,7 @@ A `PreToolUse` hook runs on every `Read`, `Glob`, or `Grep` call. It detects the
 | Field               | Purpose                                                        |
 |---------------------|----------------------------------------------------------------|
 | `plugin`            | Plugin name as registered in the marketplace                   |
+| `skillPrefix`       | Optional. Skill-name prefix when it differs from `plugin`; defaults to `plugin` |
 | `detect.file`       | Exact file path whose presence signals the project type        |
 | `detect.files`      | Shell glob — greps inside every matching file for `pattern`    |
 | `detect.pattern`    | Regex grep pattern to confirm the match                        |
