@@ -58,7 +58,7 @@ Compare the user's project description against each recommendation's `plugin` na
 
 ## Step 3: Verify the plugin is installed
 
-The skill prefix is the recommendation's `skillPrefix` when it is a non-empty string, otherwise its `plugin` value.
+The skill prefix is the recommendation's `skillPrefix` when it is a non-empty string, otherwise its `plugin` value. The prefix is for detection only: the install prompt and commands below always use `plugin`, the installable marketplace name.
 
 Check the available skills listed in the system-reminder in your conversation context for any skill prefixed `<skill-prefix>:`.
 
@@ -75,8 +75,6 @@ If the user chooses to install, output the following commands and **stop**:
 /plugin marketplace add <marketplace>
 /plugin install <plugin>
 ```
-
-The skill prefix is for detection only. The prompt and the commands above always use `plugin`, the installable marketplace name.
 
 Tell the user to run these commands, then re-invoke `/create` with the same project description. **Do not proceed to Step 4.**
 
